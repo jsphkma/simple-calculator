@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>calculator</title>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link rel="stylesheet" href="./css/calculatorStyles.css">
+    </head>
+    <body>
+        <div class="calculator-container">
+
+<!--Calculator button layout  -->
+            <input type="text" id="txtNumber" name="txtNumber" disabled/>
+            <br/><br/>
+            <button class="button-layout" value="" id="clearAll" onclick="">CA</button>
+            <button class="button-layout" value="" id="showHistory" onclick="">H</button>
+            <button class="button-layout" value="%" id="percentage" onclick="operate(this);">%</button>
+            <button class="button-layout" value="+" id="addition" onclick="operate(this);">+</button>
+
+            <br>
+
+            <button class="button-layout number-only" value="1" id="1" onclick="addNumber(this);">1</button>
+            <button class="button-layout number-only" value="2" id="2" onclick="addNumber(this);">2</button>
+            <button class="button-layout number-only" value="3" id="3" onclick="addNumber(this);">3</button>
+            <button class="button-layout" value="-" id="subtraction" onclick="operate(this);">-</button>
+            <br/>
+
+            <button class="button-layout number-only" value="4" id="4" onclick="addNumber(this);">4</button>
+            <button class="button-layout number-only" value="5" id="5" onclick="addNumber(this);">5</button>
+            <button class="button-layout number-only" value="6" id="6" onclick="addNumber(this);">6</button>
+            <button class="button-layout" value="*" id="multiply" onclick="operate(this);">*</button>
+
+            <br/>
+
+
+            <button class="button-layout number-only" value="7" id="7" onclick="addNumber(this);">7</button>
+            <button class="button-layout number-only" value="8" id="8" onclick="addNumber(this);">8</button>
+            <button class="button-layout number-only" value="9" id="9" onclick="addNumber(this);">9</button>
+            <button class="button-layout" value="/" id="division" onclick="operate(this);">/</button>
+
+            <br/>
+
+
+            <button class="button-layout number-only zeroBtn" value="0" id="0" onclick="addNumber(this);">0</button>
+            <button class="button-layout number-only" value="." id="dot" onclick="addDot();">.</button>
+
+            <button class="button-layout" value="=" id="equal" onclick="equal()">=</button>
+
+            <!-- <button class="button-layout" value="(" id="LBracket" onclick="addNumber(this);">(</button>
+            <button class="button-layout" value=")" id="RBracket" onclick="addNumber(this);">)</button> -->
+
+        </div>
+
+        <div class="div1" id="div1"></div>
+        <script src="calculator.js"></script>
+    </body>
+</html>
