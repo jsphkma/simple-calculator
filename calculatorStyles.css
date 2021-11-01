@@ -1,0 +1,86 @@
+/*html {
+    position: relative;
+    min-width: 320px;
+    min-height: 100%;
+}*/
+
+body {
+    background: #222222;
+    text-align: center;
+}
+
+#txtNumber {
+    width: 90%;
+    padding: 0;
+    height: 2em;
+    font-size: 1.5em;
+    text-align: right;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.calculator-container {
+    background: black;
+    padding: 1.5em;
+    width: 300px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, .5);
+    font-size: 1.1em;
+
+}
+
+.button-layout {
+    font-size: 1.1em;
+    border-radius: 7px;
+    border: none;
+    padding: 0;
+    margin: 0.2em;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    outline: none;
+    background: linear-gradient(#9a9a9a,white,#9a9a9a);
+    font-family:monospace;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+.button-layout:active {
+    color: rgba(251, 117, 75, 1);
+    box-shadow: 1px 3px 20px rgba(251, 117, 75, 1);
+
+}
+
+.number-only {
+    border-radius: 23px;
+}
+
+.div1 {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 40%;
+    /*background-color: #ADD8E6;*/
+    color: black;
+    bottom: 100px;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    background: linear-gradient(
+    90deg,
+    rgba(90,100,100,.4),
+     rgba(90,100,100,.8)),
+     url('./images/abacus.png');
+    background-position: 100% 20%;
+    background-size:cover;
+    border-radius: 25px;
+}
+#div1 {
+  display: none;
+}
+
+.zeroBtn {
+    border-radius: 1em;
+    width: 6.6em;
+}
