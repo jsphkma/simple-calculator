@@ -1,10 +1,3 @@
-// Nice work on your calculator everyone!
-// I like the history function, and I like how your equals function
-// simply processes all the opterations in the display - works nicely.
-// Clearly you did a good bunch of testing and you're catching some good errors before they
-// get to the user.  Nicely done, looks and works great - and with comments and click graphics as well.
-// 10/10
-
 /*Global  Variables */
 var display="";
 var counter = 0;
@@ -14,11 +7,11 @@ var getCalculatorDisplay = document.getElementById("txtNumber");
 var prvNumber = false;      // to check if the previous input is a number
 var prvOperation = false;
 var prvBracket = false;
-// var bracketStarted = false;
 MAXLENGTH = 10;
 var operation;
 var currentInput="";
-/* END GLOBAL VARIABLES*/
+
+// functions
 
 function addNumber(buttonElement){
 
@@ -36,18 +29,10 @@ function addNumber(buttonElement){
         prvNumber = true;
         prvOperation = false;
     }
-
-
-
-
+    
 }
 
-
-
-
 function equal() {
-
-
         // for simple operations, we need to make sure only two numbers are inputed
         if (display == "")
         {
@@ -64,19 +49,15 @@ function equal() {
                 return;
             }
 
-
             getHistory();
             getCalculatorDisplay.value=displayResult;
             divideByZero();
             display = "";
-
         }
         else if (!prvNumber)
         {
             alert("Please Make sure you finish your operation Input");
-
         }
-
 }
 
 function getHistory() {
@@ -97,9 +78,6 @@ function getHistory() {
 
   }
 }
-
-
-
 
 getHistoryBtn.addEventListener("click", function() {
   var getDiv1 = document.getElementById("div1");
@@ -161,7 +139,7 @@ function operate(buttonElement)
 function addDot() {
     currentInput = ".";
 
-    // cHECK IF THE LAST number has a decimal already or not
+    // This function is to check if the number has a decimal already or not
     var currentDisplay = getCalculatorDisplay.value;
     var TempCurrentDisplay = currentDisplay;
     var selectors = ['\\\+','-','\\*','/','\\\%'];
@@ -191,36 +169,3 @@ function addDot() {
     }
 
 }
-//
-// function addBracket(bracketElement){
-//     currentInput = bracketElement.value;
-//
-//     // if there is no display yet, do not allow adding ) , but only (
-//     if ((display =="") && (currentInput == "(") && ! bracketStarted)
-//     {
-//         display = currentInput;
-//         getCalculatorDisplay.value = display;
-//         prvBracket = true;
-//         bracketStarted = true;
-//
-//     }
-//     else if (prvOperation && currentInput == ")")
-//     {
-//         // do nothing, don't allow this operation
-//     }
-//
-//     else if ((prvOperation) || bracketStarted)
-//     {
-//         display += currentInput;
-//         getCalculatorDisplay.value = display;
-//         prvBracket = true;
-//         if (currentInput == '(' && bracketStarted) {
-//             bracketStarted = true;
-//         }
-//         else if (currentInput == ')') {
-//             bracketStarted = false;
-//         }
-//
-//
-//     }
-// }
