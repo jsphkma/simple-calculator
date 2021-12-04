@@ -167,6 +167,3 @@ function addDot() {
             getCalculatorDisplay.value = display;
         }
     }
-
-}
-
